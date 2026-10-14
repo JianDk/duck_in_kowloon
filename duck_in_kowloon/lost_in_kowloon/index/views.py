@@ -5,14 +5,15 @@ from django.shortcuts import redirect, render
 from django.views import View
 from .forms import ContactForm
 from .models import Dish
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 class IndexView(View):
+    @method_decorator(login_required(login_url='login'))
     def get(self, request, *args, **kwargs):
-        dishes = Dish.objects.filter(is_active=True).order_by("display_order", "name")[:15]
         context = {
             "title": "Duck In Kowloon | Hong Kong Roasted Duck in Copenhagen",
-            "dishes": dishes,
         }
         return render(
             request=request,
