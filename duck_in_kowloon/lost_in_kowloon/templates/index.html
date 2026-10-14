@@ -1,0 +1,20 @@
+{% extends 'baseTemplate.html' %}
+{% load static %}
+
+{% block meta %}
+<meta name="description" content="Duck In Kowloon in Copenhagen serves Hong Kong roasted duck and siu mei classics.">
+{% endblock %}
+
+{% block headerScripts %}
+{% endblock %}
+
+{% block content %}
+{% include 'sections/home_hero_video.html' %}
+{% include 'sections/home_menu.html' %}
+{% include 'sections/home_hours_walkin.html' %}
+{% include 'sections/home_footer_social.html' %}
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/home-menu-swiper.js' %}" defer></script>
+{% endblock %}

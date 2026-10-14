@@ -1,0 +1,40 @@
+{% load static %}
+{% load django_vite %}
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+    {% endblock %}
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href={% static 'tailwindcss/styles.css' %}>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon/favicon-32x32.png' %}">
+    <title>{{title}}</title>
+    <!--Vite-->
+    {% vite_hmr_client %}
+    {% vite_react_refresh %}
+    {% block googleAnalytics %}
+    {% endblock %}
+
+    <!--SEO-->
+    {% block seo %}
+    {% endblock %}
+    {% block headerScripts %}
+    {% endblock %}
+</head>
+
+<body class="h-full">
+    {% include 'navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>
