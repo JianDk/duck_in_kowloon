@@ -1,25 +1,59 @@
-<nav class="sticky top-0 z-50 border-b border-cyan-300/35 bg-zinc-950/85 backdrop-blur-md">
-    <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
-        <a href="{% url 'index_view' %}" class="text-sm font-black uppercase tracking-[0.2em] text-fuchsia-100 [text-shadow:0_0_10px_rgba(236,72,153,0.45)]">
-            Duck In Kowloon
-        </a>
+<nav class="sticky top-0 z-50 bg-emerald-900 text-white" aria-label="Main navigation">
+    <div class="relative mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-6">
+        <button
+            type="button"
+            class="relative z-[60] inline-flex h-12 w-12 items-center justify-center text-red-600 transition hover:text-[#d6c27f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d6c27f]"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            data-nav-toggle
+        >
+            <svg data-menu-open-icon class="h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <path d="M3 8h26M3 16h26M3 24h26" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <svg data-menu-close-icon class="hidden h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <path d="m6 6 20 20M26 6 6 26" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+        </button>
 
-        <ul class="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] sm:gap-3 sm:text-sm">
-            <li>
-                <a href="{% url 'index_view' %}" class="rounded-md border border-transparent px-3 py-2 text-zinc-200 transition hover:border-emerald-300/70 hover:text-emerald-100 hover:shadow-[0_0_12px_rgba(34,197,94,0.35)]">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'index_view' %}#menu" class="rounded-md border border-transparent px-3 py-2 text-zinc-200 transition hover:border-cyan-300/70 hover:text-cyan-100 hover:shadow-[0_0_12px_rgba(34,211,238,0.35)]">
-                    Menu
-                </a>
-            </li>
-            <li>
-                <a href="{% url 'contact' %}" class="rounded-md border border-fuchsia-300/70 bg-fuchsia-500/15 px-3 py-2 text-fuchsia-100 transition hover:bg-fuchsia-400/25 hover:shadow-[0_0_12px_rgba(236,72,153,0.45)]">
-                    Contact
-                </a>
-            </li>
-        </ul>
+        <button
+            type="button"
+            class="fixed inset-0 z-40 hidden cursor-default bg-black/50 border"
+            aria-label="Close navigation"
+            tabindex="-1"
+            data-nav-backdrop
+        ></button>
+
+        <!--sliding navigation panel-->
+        <div
+            id="primary-navigation"
+            data-nav-panel
+            inert
+            class="fixed inset-y-0 left-0 z-50 flex h-dvh w-full -translate-x-full flex-col overflow-y-auto bg-emerald-950 text-white transition-transform duration-300 ease-in-out md:w-96"
+        >
+            <!-- Menu links -->
+            <ul class="flex flex-col gap-1 px-6 py-8 text-lg mt-5">
+                <li>
+                    <a href="/" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                        Location
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                        Contact us
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

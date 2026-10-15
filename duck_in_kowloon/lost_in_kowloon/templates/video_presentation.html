@@ -1,0 +1,8 @@
+{% load static %}
+<section class="relative w-full overflow-hidden bg-black">
+    <video class="block h-[60vh] w-full object-cover md:h-[75vh]" autoplay muted loop playsinline preload="metadata"
+        poster="{% static '' %}" aria-label="Steaming dim sum being prepared">
+        <source src="{% static 'videos/video_presentation.mp4' %}" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+</section>

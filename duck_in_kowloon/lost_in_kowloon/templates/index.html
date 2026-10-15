@@ -9,9 +9,12 @@
 {% endblock %}
 
 {% block content %}
-hello world
+{% include 'video_presentation.html' %}
 {% endblock %}
 
 {% block script %}
+<script src="{% static 'js/navbar.js' %}" />
+{% endblock %}
 
+{% block footer %}
 {% endblock %}
