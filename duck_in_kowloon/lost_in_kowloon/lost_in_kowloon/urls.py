@@ -26,7 +26,11 @@ urlpatterns = [
         template_name="login.html"
     ), name="login"),
     path("", include("index.urls")),
+    path("", include("contact.urls")),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += [
+        path("__reload__/", include("django_browser_reload.urls")),
+    ]

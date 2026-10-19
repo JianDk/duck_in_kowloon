@@ -12,6 +12,10 @@
     "tailwind_build": "npx tailwindcss -i ./static/tailwindcss/input.css -o ./static/tailwindcss/styles.css --minify"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.5.0",
+    "@mui/material": "^9.5.0",
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/vite": "^4.3.3",

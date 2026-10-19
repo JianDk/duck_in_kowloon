@@ -1,3 +1,5 @@
+from email.policy import default
+
 from django.db import models
 from django.core.exceptions import ValidationError
 
@@ -11,21 +13,22 @@ class Dish(models.Model):
 	is_active = models.BooleanField(default=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
+ 
+	is_lunch = models.BooleanField(
+     default=False,
+     help_text="check this box if the dish is available for lunch"
+    )
+ 
+	is_dinner = models.BooleanField(
+	 default=False,
+	 help_text="check this box if the dish is available for dinner"
+	)
 
 	class Meta:
 		ordering = ["display_order", "name"]
 
 	def __str__(self):
 		return f"{self.name} (DKK {self.price})"
-
-	def clean(self):
-		super().clean()
-		if not self.is_active:
-			return
-
-		active_count = Dish.objects.filter(is_active=True).exclude(pk=self.pk).count()
-		if active_count >= 15:
-			raise ValidationError("You can only keep up to 15 active dishes.")
 
 	def save(self, *args, **kwargs):
 		old_image_name = None

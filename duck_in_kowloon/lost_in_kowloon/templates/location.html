@@ -1,0 +1,143 @@
+{% load static %}
+
+<section id="location-section" class="bg-[#FAF7EF] px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
+    <div class="mx-auto max-w-5xl">
+
+        <!-- Section heading -->
+        <div class="mb-8 text-center sm:mb-10">
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#8B7135]">
+                Find Us
+            </p>
+
+            <h2 class="font-heading text-3xl font-bold text-[#064E3B] sm:text-4xl lg:text-5xl">
+                Our Location
+            </h2>
+
+            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-[#D6C27A]"></div>
+        </div>
+
+        <!-- Location card -->
+        <div class="overflow-hidden rounded-xl border border-[#D9D1BD] bg-white shadow-sm">
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+
+                <!-- Address and contact information -->
+                <div class="flex flex-col justify-center gap-7 p-6 sm:p-8 lg:p-10">
+
+                    <!-- Address -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21s7-5.5 7-12a7 7 0 1 0-14 0c0 6.5 7 12 7 12Z" />
+                                <circle cx="12" cy="9" r="2.5" />
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                                Address
+                            </h3>
+
+                            <p class="mt-1 leading-relaxed text-[#575A50]">
+                                Nørre Farimagsgade 15<br>
+                                1364 København K
+                            </p>
+
+                            <a href="https://www.google.com/maps/search/?api=1&query=N%C3%B8rre+Farimagsgade+15%2C+1364+K%C3%B8benhavn+K"
+                                target="_blank" rel="noopener noreferrer"
+                                class="mt-3 inline-flex items-center gap-2 font-semibold text-[#064E3B] underline decoration-[#D6C27A] decoration-2 underline-offset-4 transition-colors hover:text-[#8B7135]">
+
+                                View on Google Maps
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 0 1 2-2h3.3a1 1 0 0 1 .95.68l1.5 4.5a1 1 0 0 1-.5 1.2l-2.1 1.05a11 11 0 0 0 5.42 5.42l1.05-2.1a1 1 0 0 1 1.2-.5l4.5 1.5a1 1 0 0 1 .68.95V19a2 2 0 0 1-2 2h-1C9.7 21 3 14.3 3 6V5Z" />
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                                Phone
+                            </h3>
+
+                            <a href="tel:12345678"
+                                class="mt-1 inline-block text-[#575A50] transition-colors hover:text-[#8B7135]">
+                                12345678
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Opening hours -->
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2" />
+                            </svg>
+                        </div>
+
+                        <div class="min-w-0 flex-1">
+                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                                Opening Hours
+                            </h3>
+
+                            <div class="mt-3 space-y-3 text-sm sm:text-base">
+
+                                <div class="flex flex-col justify-between gap-1 sm:flex-row sm:gap-4">
+                                    <span class="text-[#575A50]">
+                                        Monday – Friday
+                                    </span>
+                                    <span class="font-semibold text-[#252923] sm:text-right">
+                                        11:00 – 21:00
+                                    </span>
+                                </div>
+
+                                <div class="flex flex-col justify-between gap-1 sm:flex-row sm:gap-4">
+                                    <span class="text-[#575A50]">
+                                        Saturday – Sunday
+                                    </span>
+                                    <span class="font-semibold text-[#252923] sm:text-right">
+                                        12:00 – 22:00
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Map panel -->
+                <div class="relative min-h-[280px] bg-[#E8E2D3] md:min-h-full">
+
+                    <iframe title="Duck In Kowloon location map"
+                        src="https://maps.google.com/maps?q=N%C3%B8rre%20Farimagsgade%2015%2C%201364%20K%C3%B8benhavn%20K&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        class="absolute inset-0 h-full w-full border-0" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

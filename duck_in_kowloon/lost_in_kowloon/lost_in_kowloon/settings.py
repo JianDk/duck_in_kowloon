@@ -35,12 +35,12 @@ DJANGO_VITE_DEV_MODE = DEBUG
 ALLOWED_HOSTS = [
     '172.104.143.91',
     '127.0.0.1',
+    'localhost',
 ]
 
-
 # Application definition
-
 INSTALLED_APPS = [
+    "django_browser_reload",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django_vite',
     'django_extensions',
     'index',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -60,10 +61,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'lost_in_kowloon.urls'
-
 
 TEMPLATES = [
     {
@@ -83,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lost_in_kowloon.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
@@ -93,7 +93,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators
@@ -131,15 +130,20 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-
-# Email
-# https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
-
-MAILERS = {
-    'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-    },
-}
+#EMAIL
+if DEBUG:
+    #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = int(env('EMAIL_PORT'))
+EMAIL_NAME = env('EMAIL_NAME')
+EMAIL_ALIAS = env('EMAIL_ALIAS')
+EMAIL_HOST_USER = env("EMAIL_NAME")
+EMAIL_HOST_PASSWORD = env('EMAIL_PASSWORD')
+EMAIL_USE_SSL=True
+EMAIL_USE_TLS=False
 
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@duckinkowloon.local')
 CONTACT_RECIPIENT_EMAIL = os.getenv('CONTACT_RECIPIENT_EMAIL', 'hello@duckinkowloon.local')
@@ -148,8 +152,13 @@ DJANGO_VITE_ASSETS_PATH = os.path.join(BASE_DIR, "static", "dist")
 DJANGO_VITE_MANIFEST_PATH = os.path.join(DJANGO_VITE_ASSETS_PATH, ".vite", "manifest.json")
 DJANGO_VITE = {
     'default': {
+        'dev_mode': DJANGO_VITE_DEV_MODE,
         'manifest_path': DJANGO_VITE_MANIFEST_PATH,
     },
+    'contact_app': {
+        'dev_mode': DJANGO_VITE_DEV_MODE,
+        'manifest_path': DJANGO_VITE_MANIFEST_PATH,
+    }
 }
 
 STATICFILES_DIRS = [
@@ -164,3 +173,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
+
+GRAPH_MODELS = {
+  'app_labels': ["index", "contact",],
+}

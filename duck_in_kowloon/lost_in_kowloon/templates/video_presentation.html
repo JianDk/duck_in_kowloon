@@ -1,8 +1,28 @@
 {% load static %}
-<section class="relative w-full overflow-hidden bg-black">
-    <video class="block h-[60vh] w-full object-cover md:h-[75vh]" autoplay muted loop playsinline preload="metadata"
-        poster="{% static '' %}" aria-label="Steaming dim sum being prepared">
+<section class="relative isolate flex h-dvh w-full items-center justify-center overflow-hidden bg-black">
+
+    <!-- Background video -->
+    <video class="absolute inset-0 z-0 h-full w-full object-cover" autoplay muted loop playsinline preload="metadata"
+        poster="{% static 'images/logo.png' %}" aria-label="Steaming dim sum being prepared">
         <source src="{% static 'videos/video_presentation.mp4' %}" type="video/mp4">
         Your browser does not support HTML video.
     </video>
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 z-10 bg-black/40"></div>
+
+    <!-- Logo and text -->
+    <div class="relative z-20 flex flex-col items-center px-6 py-12 text-center text-white">
+
+        <img src="{% static 'images/logo.png' %}" alt="Duck in Kowloon logo"
+            class="mb-6 w-40 object-contain drop-shadow-lg md:w-56">
+
+        <h1 class="font-heading text-3xl font-bold tracking-wide drop-shadow-lg md:text-5xl">
+            Duck in Kowloon
+        </h1>
+
+        <p class="font-sans italic mt-4 max-w-2xl text-lg drop-shadow-lg md:text-2xl">
+            Let's get lost in Kowloon!
+        </p>
+    </div>
 </section>

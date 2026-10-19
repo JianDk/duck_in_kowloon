@@ -41,7 +41,7 @@ export default defineConfig({
     target: 'es2015',
     rollupOptions: {
       input: {
-
+        contact_app: resolve('./assets/pages/contact.jsx'),
       }
     },
   },
