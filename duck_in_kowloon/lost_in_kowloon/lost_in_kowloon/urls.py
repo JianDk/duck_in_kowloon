@@ -27,6 +27,7 @@ urlpatterns = [
     ), name="login"),
     path("", include("index.urls")),
     path("", include("contact.urls")),
+    path("cookies/", include("cookie_consent.urls")),
 ]
 
 if settings.DEBUG:
