@@ -2,6 +2,18 @@
 {% load static %}
 {% load django_vite %}
 
+{% block googleAnalytics %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVC953S0XZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVC953S0XZ');
+</script>
+{% endblock %}
+
 {% block content %}
 {% csrf_token %}
 <main id="contact" data-recaptcha-site-key="{{ recaptcha_site_key }}" data-submit-url="{% url 'contact-submit' %}"></main>

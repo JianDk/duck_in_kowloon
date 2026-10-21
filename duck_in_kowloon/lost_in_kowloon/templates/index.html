@@ -5,6 +5,17 @@
 <meta name="description" content="Duck In Kowloon in Copenhagen serves Hong Kong roasted duck and siu mei classics.">
 {% endblock %}
 
+{% block googleAnalytics %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SVC953S0XZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SVC953S0XZ');
+</script>
+{% endblock %}
 {% block headerScripts %}
 {% endblock %}
 
