@@ -29,10 +29,12 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 DJANGO_VITE_DEV_MODE = DEBUG
 
 ALLOWED_HOSTS = [
+    'duckin.dk',
+    'www.duckin.dk',
     '172.104.143.91',
     '127.0.0.1',
     'localhost',

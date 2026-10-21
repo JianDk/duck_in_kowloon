@@ -1,0 +1,712 @@
+[2026-10-21 19:54:57 +0000] [24195] [DEBUG] Current configuration:
+  config: gunicorn_config.py
+  wsgi_app: lost_in_kowloon.wsgi:application
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/jianwu/duck_in_kowloon/duck_in_kowloon/lost_in_kowloon
+  daemon: False
+  raw_env: []
+  pidfile: ./dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: ./access_log.txt
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./error_log.txt
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  enable_backlog_metric: False
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7045111012d0>
+  on_reload: <function OnReload.on_reload at 0x7045111014e0>
+  when_ready: <function WhenReady.when_ready at 0x7045111016f0>
+  pre_fork: <function Prefork.pre_fork at 0x704511101850>
+  post_fork: <function Postfork.post_fork at 0x704511101a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x704511101c70>
+  worker_int: <function WorkerInt.worker_int at 0x704511101dd0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x704511101fe0>
+  pre_exec: <function PreExec.pre_exec at 0x704511102140>
+  pre_request: <function PreRequest.pre_request at 0x704511102350>
+  post_request: <function PostRequest.post_request at 0x7045111024b0>
+  child_exit: <function ChildExit.child_exit at 0x704511102610>
+  worker_exit: <function WorkerExit.worker_exit at 0x704511102770>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7045111028d0>
+  on_exit: <function OnExit.on_exit at 0x704511102a30>
+  ssl_context: <function NewSSLContext.ssl_context at 0x704511102b90>
+  proxy_protocol: off
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  protocol: http
+  uwsgi_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  http_protocols: ['h1']
+  http2_cleartext: off
+  http2_max_concurrent_streams: 100
+  http2_initial_window_size: 65535
+  http2_max_frame_size: 16384
+  http2_max_header_list_size: 65536
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+  asgi_loop: auto
+  asgi_lifespan: auto
+  asgi_disconnect_grace_period: 3
+  http_parser: auto
+  root_path: 
+  dirty_apps: []
+  dirty_workers: 0
+  dirty_timeout: 300
+  dirty_threads: 1
+  dirty_graceful_timeout: 30
+  on_dirty_starting: <function OnDirtyStarting.on_dirty_starting at 0x704511103110>
+  dirty_post_fork: <function DirtyPostFork.dirty_post_fork at 0x704511103270>
+  dirty_worker_init: <function DirtyWorkerInit.dirty_worker_init at 0x7045111033d0>
+  dirty_worker_exit: <function DirtyWorkerExit.dirty_worker_exit at 0x704511103530>
+  control_socket: /run/user/1000/gunicorn.ctl
+  control_socket_mode: 384
+  control_socket_disable: False
+[2026-10-21 19:54:57 +0000] [24195] [INFO] Starting gunicorn 26.2.0
+[2026-10-21 19:54:57 +0000] [24195] [DEBUG] Arbiter booted
+[2026-10-21 19:54:57 +0000] [24195] [INFO] Listening at: http://127.0.0.1:8000 (24195)
+[2026-10-21 19:54:57 +0000] [24195] [INFO] Using worker: sync
+[2026-10-21 19:54:57 +0000] [24204] [INFO] Booting worker with pid: 24204
+[2026-10-21 19:54:57 +0000] [24205] [INFO] Booting worker with pid: 24205
+[2026-10-21 19:54:57 +0000] [24195] [DEBUG] 2 workers
+[2026-10-21 19:54:58 +0000] [24195] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-10-21 19:55:01 +0000] [24195] [INFO] Handling signal: int
+[2026-10-21 19:55:01 +0000] [24205] [INFO] Worker exiting (pid: 24205)
+[2026-10-21 19:55:01 +0000] [24204] [INFO] Worker exiting (pid: 24204)
+[2026-10-21 19:55:01 +0000] [24195] [INFO] Shutting down: Master
+[2026-10-21 20:13:53 +0000] [29845] [DEBUG] Current configuration:
+  config: gunicorn_config.py
+  wsgi_app: lost_in_kowloon.wsgi:application
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/jianwu/duck_in_kowloon/duck_in_kowloon/lost_in_kowloon
+  daemon: True
+  raw_env: []
+  pidfile: ./dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1', '::1']
+  accesslog: ./access_log.txt
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./error_log.txt
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  enable_backlog_metric: False
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x724f1655c670>
+  on_reload: <function OnReload.on_reload at 0x724f1655c880>
+  when_ready: <function WhenReady.when_ready at 0x724f1655ca90>
+  pre_fork: <function Prefork.pre_fork at 0x724f1655cbf0>
+  post_fork: <function Postfork.post_fork at 0x724f1655ce00>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x724f1655d010>
+  worker_int: <function WorkerInt.worker_int at 0x724f1655d170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x724f1655d380>
+  pre_exec: <function PreExec.pre_exec at 0x724f1655d4e0>
+  pre_request: <function PreRequest.pre_request at 0x724f1655d6f0>
+  post_request: <function PostRequest.post_request at 0x724f1655d850>
+  child_exit: <function ChildExit.child_exit at 0x724f1655d9b0>
+  worker_exit: <function WorkerExit.worker_exit at 0x724f1655db10>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x724f1655dc70>
+  on_exit: <function OnExit.on_exit at 0x724f1655ddd0>
+  ssl_context: <function NewSSLContext.ssl_context at 0x724f1655df30>
+  proxy_protocol: off
+  proxy_allow_ips: ['127.0.0.1', '::1']
+  protocol: http
+  uwsgi_allow_ips: ['127.0.0.1', '::1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  http_protocols: ['h1']
+  http2_cleartext: off
+  http2_max_concurrent_streams: 100
+  http2_initial_window_size: 65535
+  http2_max_frame_size: 16384
+  http2_max_header_list_size: 65536
+  raw_paste_global_conf: []
+  permit_obsolete_folding: False
+  strip_header_spaces: False
+  permit_unconventional_http_method: False
+  permit_unconventional_http_version: False
+  casefold_http_method: False
+  forwarder_headers: ['SCRIPT_NAME', 'PATH_INFO']
+  header_map: drop
+  asgi_loop: auto
+  asgi_lifespan: auto
+  asgi_disconnect_grace_period: 3
+  http_parser: auto
+  root_path: 
+  dirty_apps: []
+  dirty_workers: 0
+  dirty_timeout: 300
+  dirty_threads: 1
+  dirty_graceful_timeout: 30
+  on_dirty_starting: <function OnDirtyStarting.on_dirty_starting at 0x724f1655e4b0>
+  dirty_post_fork: <function DirtyPostFork.dirty_post_fork at 0x724f1655e610>
+  dirty_worker_init: <function DirtyWorkerInit.dirty_worker_init at 0x724f1655e770>
+  dirty_worker_exit: <function DirtyWorkerExit.dirty_worker_exit at 0x724f1655e8d0>
+  control_socket: /run/user/1000/gunicorn.ctl
+  control_socket_mode: 384
+  control_socket_disable: False
+[2026-10-21 20:13:53 +0000] [29845] [INFO] Starting gunicorn 26.2.0
+[2026-10-21 20:13:53 +0000] [29845] [DEBUG] Arbiter booted
+[2026-10-21 20:13:53 +0000] [29845] [INFO] Listening at: http://127.0.0.1:8000 (29845)
+[2026-10-21 20:13:53 +0000] [29845] [INFO] Using worker: sync
+[2026-10-21 20:13:53 +0000] [29847] [INFO] Booting worker with pid: 29847
+[2026-10-21 20:13:53 +0000] [29855] [INFO] Booting worker with pid: 29855
+[2026-10-21 20:13:53 +0000] [29845] [DEBUG] 2 workers
+[2026-10-21 20:13:53 +0000] [29845] [INFO] Control socket listening at /run/user/1000/gunicorn.ctl
+[2026-10-21 20:13:54 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:54 +0000] [29855] [DEBUG] GET /.env.live
+[2026-10-21 20:13:54 +0000] [29847] [DEBUG] GET /.env.live
+[2026-10-21 20:13:54 +0000] [29847] [DEBUG] GET /.env.live
+[2026-10-21 20:13:54 +0000] [29847] [DEBUG] GET /.env.live
+[2026-10-21 20:13:54 +0000] [29847] [DEBUG] GET /.env.backup
+[2026-10-21 20:13:54 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /.env.dev
+[2026-10-21 20:13:55 +0000] [29855] [DEBUG] GET /.env.dev
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:55 +0000] [29855] [DEBUG] GET /.env.dev
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /.env.dev
+[2026-10-21 20:13:55 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /.env.stage
+[2026-10-21 20:13:55 +0000] [29855] [DEBUG] GET /.env.stage
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:55 +0000] [29855] [DEBUG] GET /.env.stage
+[2026-10-21 20:13:55 +0000] [29847] [DEBUG] GET /.env.stage
+[2026-10-21 20:13:56 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:56 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:13:56 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:13:57 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:58 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:58 +0000] [29847] [DEBUG] GET /.env.old
+[2026-10-21 20:13:58 +0000] [29855] [DEBUG] GET /config/.env
+[2026-10-21 20:13:58 +0000] [29847] [DEBUG] GET /config/.env
+[2026-10-21 20:13:59 +0000] [29855] [DEBUG] GET /config/.env
+[2026-10-21 20:13:59 +0000] [29855] [DEBUG] GET /config/.env
+[2026-10-21 20:13:59 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:13:59 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:13:59 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:13:59 +0000] [29855] [DEBUG] GET /app/.env
+[2026-10-21 20:13:59 +0000] [29847] [DEBUG] GET /app/.env
+[2026-10-21 20:13:59 +0000] [29855] [DEBUG] GET /app/.env
+[2026-10-21 20:13:59 +0000] [29847] [DEBUG] GET /app/.env
+[2026-10-21 20:14:00 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:00 +0000] [29847] [DEBUG] GET /favicon.ico
+[2026-10-21 20:14:01 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:02 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:02 +0000] [29855] [DEBUG] GET /.env.save
+[2026-10-21 20:14:02 +0000] [29847] [DEBUG] GET /api/.env
+[2026-10-21 20:14:02 +0000] [29855] [DEBUG] GET /api/.env
+[2026-10-21 20:14:02 +0000] [29847] [DEBUG] GET /api/.env
+[2026-10-21 20:14:03 +0000] [29855] [DEBUG] GET /api/.env
+[2026-10-21 20:14:03 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:03 +0000] [29855] [DEBUG] GET /application/.env
+[2026-10-21 20:14:03 +0000] [29847] [DEBUG] GET /application/.env
+[2026-10-21 20:14:04 +0000] [29855] [DEBUG] GET /application/.env
+[2026-10-21 20:14:04 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:04 +0000] [29847] [DEBUG] GET /application/.env
+[2026-10-21 20:14:04 +0000] [29855] [DEBUG] GET /functions/.env
+[2026-10-21 20:14:04 +0000] [29855] [DEBUG] GET /functions/.env
+[2026-10-21 20:14:04 +0000] [29847] [DEBUG] GET /functions/.env
+[2026-10-21 20:14:04 +0000] [29855] [DEBUG] GET /functions/.env
+[2026-10-21 20:14:05 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:06 +0000] [29855] [DEBUG] GET /.env.bak
+[2026-10-21 20:14:11 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:11 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /deployment/.env
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /server/.env
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /deployment/.env
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:12 +0000] [29847] [DEBUG] GET /deployment/.env
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:13 +0000] [29847] [DEBUG] GET /frontend/.env
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /laravel/.env
+[2026-10-21 20:14:13 +0000] [29847] [DEBUG] GET /frontend/.env
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:13 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:13 +0000] [29847] [DEBUG] GET /frontend/.env
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /admin/.env
+[2026-10-21 20:14:13 +0000] [29847] [DEBUG] GET /deployment/.env
+[2026-10-21 20:14:13 +0000] [29855] [DEBUG] GET /admin/.env
+[2026-10-21 20:14:14 +0000] [29847] [DEBUG] GET /admin/.env
+[2026-10-21 20:14:14 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:14 +0000] [29847] [DEBUG] GET /crm/.env
+[2026-10-21 20:14:15 +0000] [29855] [DEBUG] GET /frontend/.env
+[2026-10-21 20:14:15 +0000] [29847] [DEBUG] GET /crm/.env
+[2026-10-21 20:14:15 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:15 +0000] [29847] [DEBUG] GET /crm/.env
+[2026-10-21 20:14:15 +0000] [29855] [DEBUG] GET /dev.env
+[2026-10-21 20:14:15 +0000] [29847] [DEBUG] GET /admin/.env
+[2026-10-21 20:14:16 +0000] [29855] [DEBUG] GET /dev.env
+[2026-10-21 20:14:16 +0000] [29847] [DEBUG] GET /dev.env
+[2026-10-21 20:14:16 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:16 +0000] [29847] [DEBUG] GET /.deploy.env
+[2026-10-21 20:14:16 +0000] [29855] [DEBUG] GET /admin/login/
+[2026-10-21 20:14:16 +0000] [29847] [DEBUG] GET /.deploy.env
+[2026-10-21 20:14:17 +0000] [29855] [DEBUG] GET /.deploy.env
+[2026-10-21 20:14:17 +0000] [29847] [DEBUG] GET /panel/.env
+[2026-10-21 20:14:17 +0000] [29855] [DEBUG] GET /crm/.env
+[2026-10-21 20:14:18 +0000] [29847] [DEBUG] GET /panel/.env
+[2026-10-21 20:14:18 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:14:18 +0000] [29847] [DEBUG] GET /panel/.env
+[2026-10-21 20:14:18 +0000] [29855] [DEBUG] GET /.env-backup
+[2026-10-21 20:14:18 +0000] [29847] [DEBUG] GET /dev.env
+[2026-10-21 20:14:19 +0000] [29855] [DEBUG] GET /.env-backup
+[2026-10-21 20:14:19 +0000] [29847] [DEBUG] GET /.env-backup
+[2026-10-21 20:14:19 +0000] [29855] [DEBUG] GET /config.env
+[2026-10-21 20:14:19 +0000] [29847] [DEBUG] GET /app/.env
+[2026-10-21 20:14:19 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:19 +0000] [29847] [DEBUG] GET /.deploy.env
+[2026-10-21 20:14:19 +0000] [29855] [DEBUG] GET /config.env
+[2026-10-21 20:14:19 +0000] [29847] [DEBUG] GET /config.env
+[2026-10-21 20:14:20 +0000] [29855] [DEBUG] GET /project/.env
+[2026-10-21 20:14:20 +0000] [29847] [DEBUG] GET /panel/.env
+[2026-10-21 20:14:20 +0000] [29855] [DEBUG] GET /project/.env
+[2026-10-21 20:14:20 +0000] [29847] [DEBUG] GET /project/.env
+[2026-10-21 20:14:21 +0000] [29855] [DEBUG] GET /current/.env
+[2026-10-21 20:14:21 +0000] [29847] [DEBUG] GET /.env-backup
+[2026-10-21 20:14:21 +0000] [29855] [DEBUG] GET /current/.env
+[2026-10-21 20:14:22 +0000] [29847] [DEBUG] GET /current/.env
+[2026-10-21 20:14:22 +0000] [29855] [DEBUG] GET /sample.env
+[2026-10-21 20:14:22 +0000] [29847] [DEBUG] GET /config.env
+[2026-10-21 20:14:22 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:22 +0000] [29847] [DEBUG] GET /sample.env
+[2026-10-21 20:14:22 +0000] [29855] [DEBUG] GET /sample.env
+[2026-10-21 20:14:23 +0000] [29847] [DEBUG] GET /.env.docker
+[2026-10-21 20:14:23 +0000] [29855] [DEBUG] GET /project/.env
+[2026-10-21 20:14:23 +0000] [29847] [DEBUG] GET /.env.docker
+[2026-10-21 20:14:23 +0000] [29855] [DEBUG] GET /.env.docker
+[2026-10-21 20:14:23 +0000] [29847] [DEBUG] GET /system/.env
+[2026-10-21 20:14:23 +0000] [29855] [DEBUG] GET /current/.env
+[2026-10-21 20:14:23 +0000] [29847] [DEBUG] GET /system/.env
+[2026-10-21 20:14:24 +0000] [29855] [DEBUG] GET /system/.env
+[2026-10-21 20:14:25 +0000] [29847] [DEBUG] GET /production.env
+[2026-10-21 20:14:25 +0000] [29855] [DEBUG] GET /sample.env
+[2026-10-21 20:14:25 +0000] [29847] [DEBUG] GET /production.env
+[2026-10-21 20:14:25 +0000] [29855] [DEBUG] GET /production.env
+[2026-10-21 20:14:25 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:25 +0000] [29847] [DEBUG] POST /login/
+[2026-10-21 20:14:25 +0000] [29855] [DEBUG] GET /test/.env
+[2026-10-21 20:14:25 +0000] [29855] [DEBUG] GET /.env.docker
+[2026-10-21 20:14:25 +0000] [29855] [DEBUG] GET /test/.env
+[2026-10-21 20:14:26 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:14:26 +0000] [29847] [DEBUG] GET /test/.env
+[2026-10-21 20:14:26 +0000] [29855] [DEBUG] GET /shop/.env
+[2026-10-21 20:14:26 +0000] [29847] [DEBUG] GET /system/.env
+[2026-10-21 20:14:26 +0000] [29855] [DEBUG] GET /shop/.env
+[2026-10-21 20:14:26 +0000] [29847] [DEBUG] GET /shop/.env
+[2026-10-21 20:14:27 +0000] [29855] [DEBUG] GET /src/.env
+[2026-10-21 20:14:27 +0000] [29855] [DEBUG] GET /production.env
+[2026-10-21 20:14:27 +0000] [29847] [DEBUG] GET /src/.env
+[2026-10-21 20:14:27 +0000] [29855] [DEBUG] GET /src/.env
+[2026-10-21 20:14:28 +0000] [29847] [DEBUG] GET /old/.env
+[2026-10-21 20:14:28 +0000] [29855] [DEBUG] GET /test/.env
+[2026-10-21 20:14:28 +0000] [29847] [DEBUG] GET /application/.env
+[2026-10-21 20:14:28 +0000] [29855] [DEBUG] GET /old/.env
+[2026-10-21 20:14:28 +0000] [29847] [DEBUG] GET /old/.env
+[2026-10-21 20:14:28 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:28 +0000] [29847] [DEBUG] GET /shop/.env
+[2026-10-21 20:14:28 +0000] [29855] [DEBUG] GET /uploads/.env
+[2026-10-21 20:14:28 +0000] [29847] [DEBUG] GET /uploads/.env
+[2026-10-21 20:14:29 +0000] [29855] [DEBUG] GET /uploads/.env
+[2026-10-21 20:14:29 +0000] [29847] [DEBUG] GET /src/.env
+[2026-10-21 20:14:29 +0000] [29855] [DEBUG] GET /portal/.env
+[2026-10-21 20:14:29 +0000] [29847] [DEBUG] GET /portal/.env
+[2026-10-21 20:14:29 +0000] [29855] [DEBUG] GET /portal/.env
+[2026-10-21 20:14:30 +0000] [29847] [DEBUG] GET /deploy/.env
+[2026-10-21 20:14:30 +0000] [29855] [DEBUG] GET /deploy/.env
+[2026-10-21 20:14:30 +0000] [29847] [DEBUG] GET /old/.env
+[2026-10-21 20:14:30 +0000] [29855] [DEBUG] GET /deploy/.env
+[2026-10-21 20:14:30 +0000] [29847] [DEBUG] GET /.env-dist
+[2026-10-21 20:14:31 +0000] [29855] [DEBUG] GET /.env-dist
+[2026-10-21 20:14:31 +0000] [29847] [DEBUG] GET /uploads/.env
+[2026-10-21 20:14:31 +0000] [29855] [DEBUG] GET /.env-dist
+[2026-10-21 20:14:31 +0000] [29847] [DEBUG] GET /docker/.env
+[2026-10-21 20:14:31 +0000] [29855] [DEBUG] GET /functions/.env
+[2026-10-21 20:14:31 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:31 +0000] [29855] [DEBUG] GET /portal/.env
+[2026-10-21 20:14:31 +0000] [29847] [DEBUG] GET /docker/.env
+[2026-10-21 20:14:31 +0000] [29855] [DEBUG] GET /docker/.env
+[2026-10-21 20:14:32 +0000] [29847] [DEBUG] GET /.envy
+[2026-10-21 20:14:32 +0000] [29855] [DEBUG] GET /deploy/.env
+[2026-10-21 20:14:32 +0000] [29855] [DEBUG] GET /.envy
+[2026-10-21 20:14:32 +0000] [29847] [DEBUG] GET /.envy
+[2026-10-21 20:14:33 +0000] [29855] [DEBUG] GET /dashboard/.env
+[2026-10-21 20:14:33 +0000] [29847] [DEBUG] GET /.env-dist
+[2026-10-21 20:14:33 +0000] [29855] [DEBUG] GET /dashboard/.env
+[2026-10-21 20:14:33 +0000] [29847] [DEBUG] GET /dashboard/.env
+[2026-10-21 20:14:33 +0000] [29855] [DEBUG] GET /cms/.env
+[2026-10-21 20:14:33 +0000] [29847] [DEBUG] GET /docker/.env
+[2026-10-21 20:14:34 +0000] [29855] [DEBUG] GET /cms/.env
+[2026-10-21 20:14:34 +0000] [29847] [DEBUG] GET /cms/.env
+[2026-10-21 20:14:34 +0000] [29855] [DEBUG] GET /blog/.env
+[2026-10-21 20:14:34 +0000] [29847] [DEBUG] GET /.envy
+[2026-10-21 20:14:34 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:34 +0000] [29855] [DEBUG] GET /blog/.env
+[2026-10-21 20:14:34 +0000] [29847] [DEBUG] GET /blog/.env
+[2026-10-21 20:14:35 +0000] [29855] [DEBUG] GET /web/.env
+[2026-10-21 20:14:35 +0000] [29847] [DEBUG] GET /dashboard/.env
+[2026-10-21 20:14:35 +0000] [29855] [DEBUG] GET /web/.env
+[2026-10-21 20:14:35 +0000] [29847] [DEBUG] GET /web/.env
+[2026-10-21 20:14:36 +0000] [29855] [DEBUG] GET /app/config/.env
+[2026-10-21 20:14:36 +0000] [29847] [DEBUG] GET /cms/.env
+[2026-10-21 20:14:36 +0000] [29855] [DEBUG] GET /app/config/.env
+[2026-10-21 20:14:36 +0000] [29847] [DEBUG] GET /app/config/.env
+[2026-10-21 20:14:36 +0000] [29855] [DEBUG] GET /dev/.env
+[2026-10-21 20:14:36 +0000] [29847] [DEBUG] GET /core/.env
+[2026-10-21 20:14:36 +0000] [29855] [DEBUG] GET /blog/.env
+[2026-10-21 20:14:36 +0000] [29847] [DEBUG] GET /dev/.env
+[2026-10-21 20:14:37 +0000] [29855] [DEBUG] GET /dev/.env
+[2026-10-21 20:14:37 +0000] [29847] [DEBUG] GET /wp-content/.env
+[2026-10-21 20:14:37 +0000] [29855] [DEBUG] GET /web/.env
+[2026-10-21 20:14:37 +0000] [29847] [DEBUG] GET /wp-content/.env
+[2026-10-21 20:14:37 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:37 +0000] [29847] [DEBUG] GET /wp-content/.env
+[2026-10-21 20:14:38 +0000] [29855] [DEBUG] GET /app/config/.env
+[2026-10-21 20:14:39 +0000] [29847] [DEBUG] GET /dev/.env
+[2026-10-21 20:14:40 +0000] [29855] [DEBUG] GET /wp-content/.env
+[2026-10-21 20:14:40 +0000] [29847] [DEBUG] GET /example.env
+[2026-10-21 20:14:40 +0000] [29855] [DEBUG] GET /dockerfiles/sample.env
+[2026-10-21 20:14:40 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:40 +0000] [29855] [DEBUG] GET /dockerfiles/sample.env
+[2026-10-21 20:14:40 +0000] [29847] [DEBUG] GET /dockerfiles/sample.env
+[2026-10-21 20:14:41 +0000] [29855] [DEBUG] GET /.env.production.local
+[2026-10-21 20:14:41 +0000] [29847] [DEBUG] GET /favicon.ico
+[2026-10-21 20:14:42 +0000] [29855] [DEBUG] GET /.env.production.local
+[2026-10-21 20:14:42 +0000] [29847] [DEBUG] GET /.env.production.local
+[2026-10-21 20:14:42 +0000] [29847] [DEBUG] GET /.envrc
+[2026-10-21 20:14:42 +0000] [29855] [DEBUG] GET /.envrc
+[2026-10-21 20:14:43 +0000] [29847] [DEBUG] GET /.envrc
+[2026-10-21 20:14:43 +0000] [29855] [DEBUG] GET /.env.testing
+[2026-10-21 20:14:43 +0000] [29847] [DEBUG] GET /dockerfiles/sample.env
+[2026-10-21 20:14:43 +0000] [29855] [DEBUG] GET /.env.testing
+[2026-10-21 20:14:43 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:43 +0000] [29855] [DEBUG] GET /.env.testing
+[2026-10-21 20:14:44 +0000] [29847] [DEBUG] GET /engine/.env
+[2026-10-21 20:14:44 +0000] [29855] [DEBUG] GET /.env.production.local
+[2026-10-21 20:14:44 +0000] [29847] [DEBUG] GET /engine/.env
+[2026-10-21 20:14:44 +0000] [29855] [DEBUG] GET /engine/.env
+[2026-10-21 20:14:45 +0000] [29847] [DEBUG] GET /.env.dist
+[2026-10-21 20:14:45 +0000] [29855] [DEBUG] GET /root/.env
+[2026-10-21 20:14:45 +0000] [29847] [DEBUG] GET /.envrc
+[2026-10-21 20:14:45 +0000] [29855] [DEBUG] GET /root/.env
+[2026-10-21 20:14:45 +0000] [29847] [DEBUG] GET /root/.env
+[2026-10-21 20:14:45 +0000] [29855] [DEBUG] GET /main/.env
+[2026-10-21 20:14:45 +0000] [29847] [DEBUG] GET /.env.testing
+[2026-10-21 20:14:46 +0000] [29855] [DEBUG] GET /main/.env
+[2026-10-21 20:14:46 +0000] [29847] [DEBUG] GET /main/.env
+[2026-10-21 20:14:46 +0000] [29855] [DEBUG] GET /.docker/.dist.env
+[2026-10-21 20:14:46 +0000] [29847] [DEBUG] GET /engine/.env
+[2026-10-21 20:14:46 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:46 +0000] [29847] [DEBUG] GET /.docker/.dist.env
+[2026-10-21 20:14:46 +0000] [29855] [DEBUG] GET /.docker/.dist.env
+[2026-10-21 20:14:47 +0000] [29847] [DEBUG] GET /root/.env
+[2026-10-21 20:14:47 +0000] [29855] [DEBUG] GET /._dockerSetup/.env
+[2026-10-21 20:14:47 +0000] [29855] [DEBUG] GET /._dockerSetup/.env
+[2026-10-21 20:14:47 +0000] [29847] [DEBUG] GET /._dockerSetup/.env
+[2026-10-21 20:14:48 +0000] [29847] [DEBUG] GET /main/.env
+[2026-10-21 20:14:48 +0000] [29855] [DEBUG] GET /api/config.env
+[2026-10-21 20:14:48 +0000] [29855] [DEBUG] GET /api/config.env
+[2026-10-21 20:14:48 +0000] [29847] [DEBUG] GET /api/config.env
+[2026-10-21 20:14:48 +0000] [29847] [DEBUG] GET /.env.development
+[2026-10-21 20:14:48 +0000] [29855] [DEBUG] GET /.docker/.dist.env
+[2026-10-21 20:14:48 +0000] [29847] [DEBUG] GET /api/config.dev.env
+[2026-10-21 20:14:49 +0000] [29855] [DEBUG] GET /api/config.dev.env
+[2026-10-21 20:14:49 +0000] [29847] [DEBUG] GET /api/config.dev.env
+[2026-10-21 20:14:49 +0000] [29855] [DEBUG] GET /._dockerSetup/.env
+[2026-10-21 20:14:49 +0000] [29847] [DEBUG] GET /docker/.env-prod
+[2026-10-21 20:14:49 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:50 +0000] [29847] [DEBUG] GET /docker/.env-prod
+[2026-10-21 20:14:50 +0000] [29855] [DEBUG] GET /api/config.env
+[2026-10-21 20:14:50 +0000] [29847] [DEBUG] GET /application/.dev.env
+[2026-10-21 20:14:50 +0000] [29855] [DEBUG] GET /application/.dev.env
+[2026-10-21 20:14:50 +0000] [29847] [DEBUG] GET /docker/.env-prod
+[2026-10-21 20:14:51 +0000] [29855] [DEBUG] GET /api/config.dev.env
+[2026-10-21 20:14:51 +0000] [29847] [DEBUG] GET /application/.live.env
+[2026-10-21 20:14:51 +0000] [29847] [DEBUG] GET /application/.live.env
+[2026-10-21 20:14:51 +0000] [29855] [DEBUG] GET /application/.dev.env
+[2026-10-21 20:14:51 +0000] [29847] [DEBUG] GET /application/.local.env
+[2026-10-21 20:14:51 +0000] [29855] [DEBUG] GET /docker/.env-prod
+[2026-10-21 20:14:52 +0000] [29847] [DEBUG] GET /application/.local.env
+[2026-10-21 20:14:52 +0000] [29855] [DEBUG] GET /application/.live.env
+[2026-10-21 20:14:52 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:52 +0000] [29855] [DEBUG] GET /.docker/.env.dev
+[2026-10-21 20:14:53 +0000] [29847] [DEBUG] GET /application/.dev.env
+[2026-10-21 20:14:53 +0000] [29855] [DEBUG] GET /application/.local.env
+[2026-10-21 20:14:53 +0000] [29847] [DEBUG] GET /application/.live.env
+[2026-10-21 20:14:54 +0000] [29855] [DEBUG] GET /application/.local.env
+[2026-10-21 20:14:55 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:14:57 +0000] [29855] [DEBUG] GET /server/.env
+[2026-10-21 20:14:58 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:01 +0000] [29855] [DEBUG] GET /laravel/.env
+[2026-10-21 20:15:01 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:04 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:07 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:08 +0000] [29855] [DEBUG] GET /frontend/.env
+[2026-10-21 20:15:10 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:12 +0000] [29855] [DEBUG] GET /admin/.env
+[2026-10-21 20:15:13 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:15 +0000] [29855] [DEBUG] GET /admin/login/
+[2026-10-21 20:15:16 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:19 +0000] [29855] [DEBUG] GET /crm/.env
+[2026-10-21 20:15:19 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:22 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:23 +0000] [29847] [DEBUG] GET /dev.env
+[2026-10-21 20:15:25 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:28 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:29 +0000] [29855] [DEBUG] GET /panel/.env
+[2026-10-21 20:15:31 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:32 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:15:32 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:15:33 +0000] [29847] [DEBUG] GET /.env-backup
+[2026-10-21 20:15:34 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:37 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:38 +0000] [29855] [DEBUG] GET /config.env
+[2026-10-21 20:15:40 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:43 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:44 +0000] [29847] [DEBUG] GET /current/.env
+[2026-10-21 20:15:46 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:48 +0000] [29847] [DEBUG] GET /sample.env
+[2026-10-21 20:15:49 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:52 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:52 +0000] [29855] [DEBUG] GET /.env.docker
+[2026-10-21 20:15:55 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:15:56 +0000] [29855] [DEBUG] GET /system/.env
+[2026-10-21 20:15:58 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:00 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:16:00 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:16:01 +0000] [29855] [DEBUG] GET /production.env
+[2026-10-21 20:16:01 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:04 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:05 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:05 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:16:06 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:06 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:16:07 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:08 +0000] [29847] [DEBUG] GET /contact/
+[2026-10-21 20:16:10 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:11 +0000] [29847] [DEBUG] GET /src/.env
+[2026-10-21 20:16:13 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:14 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:16:15 +0000] [29855] [DEBUG] GET /old/.env
+[2026-10-21 20:16:15 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:15 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:16:15 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:15 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:15 +0000] [29855] [DEBUG] GET /contact/
+[2026-10-21 20:16:16 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:19 +0000] [29855] [DEBUG] GET /uploads/.env
+[2026-10-21 20:16:19 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:22 +0000] [29855] [DEBUG] GET /portal/.env
+[2026-10-21 20:16:22 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:25 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:26 +0000] [29855] [DEBUG] GET /deploy/.env
+[2026-10-21 20:16:28 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:31 +0000] [29855] [DEBUG] GET /.env-dist
+[2026-10-21 20:16:31 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:34 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:35 +0000] [29847] [DEBUG] GET /docker/.env
+[2026-10-21 20:16:37 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:39 +0000] [29855] [DEBUG] GET /.envy
+[2026-10-21 20:16:40 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:43 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:16:43 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:16:44 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:45 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:16:45 +0000] [29847] [DEBUG] GET /cms/.env
+[2026-10-21 20:16:46 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:16:47 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:48 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:16:48 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:16:50 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:50 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:16:50 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:16:51 +0000] [29847] [DEBUG] GET /contact/
+[2026-10-21 20:16:53 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:55 +0000] [29847] [DEBUG] GET /app/config/.env
+[2026-10-21 20:16:56 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:16:59 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:01 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:17:01 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:17:02 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:05 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:06 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:17:06 +0000] [29847] [DEBUG] GET /dockerfiles/sample.env
+[2026-10-21 20:17:07 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:17:08 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:11 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:11 +0000] [29847] [DEBUG] GET /.env.production.local
+[2026-10-21 20:17:14 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:15 +0000] [29847] [DEBUG] GET /.envrc
+[2026-10-21 20:17:15 +0000] [29855] [DEBUG] POST /login/
+[2026-10-21 20:17:17 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:19 +0000] [29855] [DEBUG] GET /.env.testing
+[2026-10-21 20:17:20 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:23 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:23 +0000] [29847] [DEBUG] GET /engine/.env
+[2026-10-21 20:17:26 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:27 +0000] [29847] [DEBUG] GET /root/.env
+[2026-10-21 20:17:29 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:29 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:17:29 +0000] [29855] [DEBUG] GET /login/
+[2026-10-21 20:17:31 +0000] [29847] [DEBUG] GET /main/.env
+[2026-10-21 20:17:32 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:35 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:35 +0000] [29855] [DEBUG] GET /.docker/.dist.env
+[2026-10-21 20:17:38 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:39 +0000] [29855] [DEBUG] GET /._dockerSetup/.env
+[2026-10-21 20:17:41 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:43 +0000] [29855] [DEBUG] POST /login/
+[2026-10-21 20:17:43 +0000] [29847] [DEBUG] GET /
+[2026-10-21 20:17:44 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:47 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:47 +0000] [29855] [DEBUG] GET /api/config.dev.env
+[2026-10-21 20:17:50 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:53 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:56 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:17:59 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:00 +0000] [29847] [DEBUG] GET /application/.local.env
+[2026-10-21 20:18:02 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:05 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:08 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:11 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:14 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:17 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:20 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:23 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:26 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:29 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:32 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:35 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:38 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:41 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:44 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:47 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:50 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:53 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:55 +0000] [29855] [DEBUG] GET /
+[2026-10-21 20:18:55 +0000] [29847] [DEBUG] GET /login/
+[2026-10-21 20:18:56 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:18:59 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:19:02 +0000] [29855] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:19:02 +0000] [29847] [DEBUG] GET /.env
+[2026-10-21 20:19:02 +0000] [29855] [DEBUG] GET /.env.example
+[2026-10-21 20:19:05 +0000] [29847] [DEBUG] GET /__reload__/events/
+[2026-10-21 20:19:08 +0000] [29855] [DEBUG] GET /__reload__/events/
