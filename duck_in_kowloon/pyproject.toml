@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "duck-in-kowloon"
+version = "0.1.0"
+description = ""
+authors = ["Jian Wu <jian_dfh@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0"
+django = "^6.1"
+django-vite = "^3.1.0"
+pillow = "^12.3.0"
+django-environ = "^0.14.0"
+django-extensions = "^4.1"
+pydot = "^4.0.1"
+django-browser-reload = "^1.21.0"
+google-cloud-recaptcha-enterprise = "^1.34.0"
+djangorestframework = "^3.18.3"
+django-cookie-consent = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
