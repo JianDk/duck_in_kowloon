@@ -10,11 +10,10 @@
     {% block meta %}
     {% endblock %}
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href={% static 'tailwindcss/styles.css' %}>
+    <link rel="stylesheet" type="text/css" href="{% static 'tailwindcss/styles.css' %}">
 
     <!--Favicon-->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon/favicon-32x32.png' %}">
-    <title>{{title}}</title>
     <!--Vite-->
     {% vite_hmr_client %}
     {% vite_react_refresh %}
@@ -38,7 +37,7 @@
 
 </head>
 
-<body class="h-full">
+<body class="h-full bg-surface font-sans text-ink">
     {% include 'navbar.html' %}
 
     {% block content %}

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_vite',
     'django_extensions',
+    'rest_framework',
     'index',
     'contact',
 ]
@@ -147,6 +148,12 @@ EMAIL_USE_TLS=False
 
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@duckinkowloon.local')
 CONTACT_RECIPIENT_EMAIL = os.getenv('CONTACT_RECIPIENT_EMAIL', 'hello@duckinkowloon.local')
+
+RECAPTCHA_SITE_KEY = env('RECAPTCHA_SITE_KEY')
+RECAPTCHA_PROJECT_ID = env('RECAPTCHA_PROJECT_ID', default='')
+RECAPTCHA_API_KEY = env('RECAPTCHA_API_KEY', default='')
+RECAPTCHA_MIN_SCORE = env.float('RECAPTCHA_MIN_SCORE', default=0.5)
+RECAPTCHA_ALLOWED_HOSTNAMES = env.list('RECAPTCHA_ALLOWED_HOSTNAMES', default=[])
 
 DJANGO_VITE_ASSETS_PATH = os.path.join(BASE_DIR, "static", "dist")
 DJANGO_VITE_MANIFEST_PATH = os.path.join(DJANGO_VITE_ASSETS_PATH, ".vite", "manifest.json")

@@ -4,7 +4,7 @@
 
 {% block content %}
 {% csrf_token %}
-<div id="contact"></div>
+<main id="contact" data-recaptcha-site-key="{{ recaptcha_site_key }}" data-submit-url="{% url 'contact-submit' %}"></main>
 {% include 'footer.html' %}
 {% endblock %}
 

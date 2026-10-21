@@ -1,15 +1,18 @@
 {% load static %}
-<nav class="sticky top-0 z-50 bg-brand text-white" aria-label="Main navigation">
-    <div class="relative flex h-24 w-full items-center justify-between px-5 py-3">
-        <img
-            class="h-20 w-auto object-contain" 
-            src="{% static 'images/logo.png' %}" 
-            alt="Duck in Kowloon logo" />
+<nav class="sticky top-0 z-50 bg-emerald-900 font-sans text-white" aria-label="Main navigation">
+    <div class="relative flex h-24 w-full items-center justify-between gap-4 px-5 py-2 sm:px-8 lg:px-10">
+        <a href="{% url 'index_view' %}" aria-label="Duck In Kowloon home"
+            class="block max-w-[calc(100%-4rem)] rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent lg:max-w-64">
+            <img
+                class="h-20 w-auto max-w-full object-contain"
+                src="{% static 'images/logo.png' %}"
+                alt="Duck in Kowloon logo" />
+        </a>
         <button
             type="button"
-            class="md:hidden relative z-[60] inline-flex h-12 w-12 items-center justify-center 
-            text-red-600 transition hover:text-[#d6c27f] focus-visible:outline-2 
-            focus-visible:outline-offset-4 focus-visible:outline-[#d6c27f]"
+            class="relative z-60 inline-flex h-12 w-12 shrink-0 items-center justify-center
+            text-accent transition-colors hover:text-white focus-visible:outline-2
+            focus-visible:outline-offset-4 focus-visible:outline-accent lg:hidden"
             aria-label="Open navigation"
             aria-expanded="false"
             aria-controls="primary-navigation"
@@ -18,14 +21,11 @@
             <svg data-menu-open-icon class="h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                 <path d="M3 8h26M3 16h26M3 24h26" stroke="currentColor" stroke-width="1.5" />
             </svg>
-            <svg data-menu-close-icon class="hidden h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                <path d="m6 6 20 20M26 6 6 26" stroke="currentColor" stroke-width="1.5" />
-            </svg>
         </button>
 
         <button
             type="button"
-            class="fixed inset-0 z-40 hidden cursor-default bg-black/50 border"
+            class="fixed inset-0 z-40 hidden cursor-default bg-black/50 lg:hidden"
             aria-label="Close navigation"
             tabindex="-1"
             data-nav-backdrop
@@ -36,54 +36,61 @@
             id="primary-navigation"
             data-nav-panel
             inert
-            class="md:hidden fixed inset-y-0 left-0 z-50 flex h-dvh w-full -translate-x-full 
-            flex-col overflow-y-auto bg-emerald-950 text-white transition-transform 
-            duration-300 ease-in-out"
+            class="fixed inset-y-0 left-0 z-50 flex h-dvh w-full -translate-x-full
+            flex-col overflow-y-auto bg-emerald-900 text-white transition-transform
+            duration-300 ease-in-out motion-reduce:transition-none lg:hidden"
         >
+            <div class="sticky top-0 z-10 flex h-24 shrink-0 items-center justify-end bg-emerald-900 px-5 sm:px-8">
+                <button type="button" data-nav-close aria-label="Close navigation"
+                    class="inline-flex h-12 w-12 items-center justify-center text-accent transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                    <svg data-menu-close-icon class="h-8 w-8" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <path d="m6 6 20 20M26 6 6 26" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </button>
+            </div>
             <!-- Menu links -->
-            <ul class="flex flex-col gap-1 px-6 py-8 text-lg mt-5">
+            <ul class="flex flex-col gap-1 px-6 pb-8 pt-16 text-lg">
                 <li>
-                    <a href="/" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                    <a href="{% url 'index_view' %}" class="block rounded px-4 py-3 transition-colors hover:bg-primary-hover hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                    <a href="{% url 'index_view' %}#menu-section" class="block rounded px-4 py-3 transition-colors hover:bg-primary-hover hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Menu
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                    <a href="{% url 'index_view' %}#location-section" class="block rounded px-4 py-3 transition-colors hover:bg-primary-hover hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Location
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block rounded px-4 py-3 transition hover:bg-white/10 hover:text-red-500">
+                    <a href="{% url 'contact' %}" class="block rounded px-4 py-3 transition-colors hover:bg-primary-hover hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Contact us
                     </a>
                 </li>
             </ul>
         </div>
-        <!--Navgation panel when screen width is larger than sm-->
-        <div class="hidden md:block absolute left-1/2 -translate-x-1/2">
-            <ul class="flex gap-5 px-6 py-8 text-lg">
+        <div class="hidden shrink-0 lg:block" data-nav-desktop>
+            <ul class="flex items-center gap-2 whitespace-nowrap text-lg xl:gap-5">
                 <li>
-                    <a href="/" class="block rounded px-4 py-3 transition hover:text-red-500">
+                    <a href="{% url 'index_view' %}" class="block rounded px-4 py-3 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#menu-section"" class="block rounded px-4 py-3 transition hover:text-red-500">
+                    <a href="{% url 'index_view' %}#menu-section" class="block rounded px-4 py-3 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Menu
                     </a>
                 </li>
                 <li>
-                    <a href="#location-section" class="block rounded px-4 py-3 transition hover:text-red-500">
+                    <a href="{% url 'index_view' %}#location-section" class="block rounded px-4 py-3 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Location
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="block rounded px-4 py-3 transition hover:text-red-500">
+                    <a href="{% url 'contact' %}" class="block rounded px-4 py-3 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
                         Contact us
                     </a>
                 </li>

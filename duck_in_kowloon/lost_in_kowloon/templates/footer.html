@@ -1,6 +1,6 @@
 {% load static %}
-<footer class="bg-emerald-900 text-stone-100">
-    <div class="mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-10">
+<footer class="bg-emerald-900 font-sans text-surface">
+    <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
 
         <!--
             Mobile: actions → social media → business information
@@ -9,30 +9,30 @@
         <div class="grid grid-cols-1 gap-8 md:gap-10 lg:grid-cols-3 lg:items-start lg:gap-12">
 
             <!-- Business information -->
-            <section class="order-3 text-center lg:order-1 lg:text-left" aria-labelledby="footer-business-heading">
-                <h2 id="footer-business-heading" class="font-heading text-xl font-semibold tracking-wide text-stone-50">
+            <section class="order-3 min-w-0 text-center lg:order-1 lg:text-left" aria-labelledby="footer-business-heading">
+                <h2 id="footer-business-heading" class="font-heading text-xl font-semibold leading-tight">
                     Duck In Kowloon
                 </h2>
 
-                <address class="mt-4 space-y-2 font-sans text-sm not-italic leading-relaxed text-stone-200">
+                <address class="mt-4 font-sans text-sm not-italic leading-relaxed text-stone-200">
                     <a href="https://www.google.com/maps/search/?api=1&query=N%C3%B8rre+Farimagsgade+15%2C+1364+K%C3%B8benhavn+K"
                         target="_blank" rel="noopener noreferrer"
-                        class="block transition-colors hover:text-[#D6C27F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="block min-h-11 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         Nørre Farimagsgade 15<br>
                         1364 København K
-                        <span aria-hidden="true" class="text-[#D6C27F]">
+                        <span aria-hidden="true" class="text-accent">
                             ↗
                         </span>
                         <span class="sr-only"> — open in Google Maps</span>
                     </a>
 
                     <a href="mailto:kontakt@duckin.dk"
-                        class="block break-words transition-colors hover:text-[#D6C27F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="mt-2 block wrap-anywhere transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         kontakt@duckin.dk
                     </a>
 
                     <a href="tel:1223456"
-                        class="block transition-colors hover:text-[#D6C27F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="block transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         Mobile: 1223456
                     </a>
 
@@ -41,11 +41,11 @@
             </section>
 
             <!-- Phone and Contact actions -->
-            <nav class="order-1 flex items-start justify-center gap-8 lg:order-2" aria-label="Contact actions">
+            <nav class="order-1 flex flex-wrap items-start justify-center gap-6 sm:gap-8 lg:order-2" aria-label="Contact actions">
                 <a href="tel:1223456" aria-label="Call Duck In Kowloon at 1223456"
-                    class="group flex min-w-24 flex-col items-center gap-2 rounded-lg text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                    class="group flex min-w-24 flex-col items-center gap-2 rounded-lg text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                     <span
-                        class="flex h-14 w-14 items-center justify-center rounded-lg bg-[#D6C27F] text-emerald-900 transition-colors group-hover:bg-[#C6AF64]"
+                        class="flex h-14 w-14 items-center justify-center rounded-lg bg-accent text-emerald-900 transition-colors group-hover:bg-accent-hover"
                         aria-hidden="true">
                         <!-- Phone icon (inline SVG) -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -56,16 +56,15 @@
                     </span>
 
                     <span
-                        class="font-sans text-sm font-medium text-stone-100 transition-colors group-hover:text-[#D6C27F]">
+                        class="font-sans text-sm font-medium transition-colors group-hover:text-accent">
                         Call us
                     </span>
                 </a>
 
-                <!-- Replace # with the Contact page URL when available -->
-                <a href="#" aria-label="Contact Duck In Kowloon"
-                    class="group flex min-w-24 flex-col items-center gap-2 rounded-lg text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                <a href="{% url 'contact' %}" aria-label="Contact Duck In Kowloon"
+                    class="group flex min-w-24 flex-col items-center gap-2 rounded-lg text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                     <span
-                        class="flex h-14 w-14 items-center justify-center rounded-lg bg-[#D6C27F] text-emerald-900 transition-colors group-hover:bg-[#C6AF64]"
+                        class="flex h-14 w-14 items-center justify-center rounded-lg bg-accent text-emerald-900 transition-colors group-hover:bg-accent-hover"
                         aria-hidden="true">
                         <!-- Envelope icon (inline SVG) -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -76,7 +75,7 @@
                     </span>
 
                     <span
-                        class="font-sans text-sm font-medium text-stone-100 transition-colors group-hover:text-[#D6C27F]">
+                        class="font-sans text-sm font-medium transition-colors group-hover:text-accent">
                         Contact
                     </span>
                 </a>
@@ -88,11 +87,11 @@
                     Follow us
                 </p>
 
-                <div class="flex items-center justify-center gap-7">
+                <div class="flex flex-wrap items-center justify-center gap-3 lg:justify-end">
                     <!-- Replace # with the real social profile URLs -->
 
                     <a href="#" aria-label="Instagram"
-                        class="text-[#D6C27F] transition-colors hover:text-stone-50 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded text-accent transition-colors hover:text-surface focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.8" class="h-6 w-6" aria-hidden="true">
                             <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -102,7 +101,7 @@
                     </a>
 
                     <a href="#" aria-label="TikTok"
-                        class="text-[#D6C27F] transition-colors hover:text-stone-50 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded text-accent transition-colors hover:text-surface focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"
                             aria-hidden="true">
                             <path
@@ -111,7 +110,7 @@
                     </a>
 
                     <a href="#" aria-label="Facebook"
-                        class="text-[#D6C27F] transition-colors hover:text-stone-50 focus-visible:rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D6C27F]">
+                        class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded text-accent transition-colors hover:text-surface focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"
                             aria-hidden="true">
                             <path
@@ -123,8 +122,8 @@
         </div>
 
         <!-- Copyright -->
-        <div class="mt-8 border-t border-emerald-700/70 pt-5 text-center">
-            <p class="font-sans text-xs leading-relaxed text-emerald-100/70">
+        <div class="mt-8 border-t border-accent/30 pt-5 text-center">
+            <p class="font-sans text-xs leading-relaxed text-stone-200">
                 &copy; <span id="copyright-year">2026</span>
                 Duck In Kowloon. All rights reserved.
             </p>

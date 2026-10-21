@@ -2,15 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.querySelector("[data-nav-toggle]");
     const panel = document.querySelector("[data-nav-panel]");
     const backdrop = document.querySelector("[data-nav-backdrop]");
-    const openIcon = document.querySelector("[data-menu-open-icon]");
-    const closeIcon = document.querySelector("[data-menu-close-icon]");
+    const closeButton = document.querySelector("[data-nav-close]");
 
-    if (!toggle || !panel || !backdrop) return;
+    if (!toggle || !panel || !backdrop || !closeButton) return;
 
+    const desktopNavigation = window.matchMedia("(min-width: 64rem)");
     let isOpen = false;
-    
+
     function openMenu() {
-        if (isOpen) return;
+        if (isOpen || desktopNavigation.matches) return;
         isOpen = true;
         panel.inert = false;
         panel.classList.remove("-translate-x-full");
@@ -18,17 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
         backdrop.classList.remove("hidden");
         // Allow the backdrop to transition from transparent.
         requestAnimationFrame(() => {
+            if (!isOpen) return;
             backdrop.classList.remove("opacity-0");
             backdrop.classList.add("opacity-100");
         });
 
         toggle.setAttribute("aria-expanded", "true");
-        toggle.setAttribute("aria-label", "Close navigation");
-
-        openIcon.classList.add("hidden");
-        closeIcon.classList.remove("hidden");
+        toggle.classList.add("invisible");
 
         document.body.classList.add("overflow-hidden");
+        closeButton.focus({ preventScroll: true });
     }
 
     function closeMenu() {
@@ -43,12 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
         backdrop.classList.remove("opacity-100");
 
         toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open navigation");
-
-        openIcon.classList.remove("hidden");
-        closeIcon.classList.add("hidden");
+        toggle.classList.remove("invisible");
 
         document.body.classList.remove("overflow-hidden");
+
+        if (panel.contains(document.activeElement) || document.activeElement === toggle) {
+            const focusTarget = desktopNavigation.matches
+                ? document.querySelector("[data-nav-desktop] a")
+                : toggle;
+            focusTarget?.focus();
+        }
 
         // Wait until the backdrop fade-out finishes.
         window.setTimeout(() => {
@@ -63,6 +66,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     backdrop.addEventListener("click", closeMenu);
+    closeButton.addEventListener("click", closeMenu);
+
+    desktopNavigation.addEventListener("change", () => {
+        if (desktopNavigation.matches) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (!isOpen) return;
+        if (event.key === "Escape") {
+            closeMenu();
+            toggle.focus();
+        }
+        if (event.key === "Tab") {
+            const links = panel.querySelectorAll("a");
+            const lastLink = links[links.length - 1];
+            if (event.shiftKey && document.activeElement === closeButton) {
+                event.preventDefault();
+                lastLink?.focus();
+            } else if (!event.shiftKey && document.activeElement === lastLink) {
+                event.preventDefault();
+                closeButton.focus();
+            }
+        }
+    });
 
     panel.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeMenu);

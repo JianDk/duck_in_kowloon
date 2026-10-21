@@ -1,33 +1,33 @@
 {% load static %}
 
-<section id="location-section" class="bg-[#FAF7EF] px-4 py-8 sm:px-6 sm:py-16 lg:px-8">
+<section id="location-section" class="scroll-mt-24 bg-surface px-4 py-12 font-sans text-ink sm:px-6 sm:py-16 lg:px-8 lg:py-20">
     <div class="mx-auto max-w-5xl">
 
         <!-- Section heading -->
         <div class="mb-8 text-center sm:mb-10">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#8B7135]">
+            <p class="mb-2 text-xs font-semibold uppercase text-accent-ink">
                 Find Us
             </p>
 
-            <h2 class="font-heading text-3xl font-bold text-[#064E3B] sm:text-4xl lg:text-5xl">
+            <h2 class="font-heading text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
                 Our Location
             </h2>
 
-            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-[#D6C27A]"></div>
+            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-accent"></div>
         </div>
 
         <!-- Location card -->
-        <div class="overflow-hidden rounded-xl border border-[#D9D1BD] bg-white shadow-sm">
+        <div class="overflow-hidden rounded-lg border border-outline bg-surface-raised shadow-sm">
 
             <div class="grid grid-cols-1 md:grid-cols-2">
 
                 <!-- Address and contact information -->
-                <div class="flex flex-col justify-center gap-7 p-6 sm:p-8 lg:p-10">
+                <div class="flex min-w-0 flex-col justify-center gap-7 p-4 sm:p-6 lg:p-8">
 
                     <!-- Address -->
                     <div class="flex items-start gap-4">
                         <div
-                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-accent">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -36,19 +36,19 @@
                             </svg>
                         </div>
 
-                        <div>
-                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                        <div class="min-w-0 flex-1">
+                            <h3 class="font-heading text-lg font-bold text-primary">
                                 Address
                             </h3>
 
-                            <p class="mt-1 leading-relaxed text-[#575A50]">
+                            <p class="mt-1 wrap-break-word leading-relaxed text-ink-muted">
                                 Nørre Farimagsgade 15<br>
                                 1364 København K
                             </p>
 
                             <a href="https://www.google.com/maps/search/?api=1&query=N%C3%B8rre+Farimagsgade+15%2C+1364+K%C3%B8benhavn+K"
                                 target="_blank" rel="noopener noreferrer"
-                                class="mt-3 inline-flex items-center gap-2 font-semibold text-[#064E3B] underline decoration-[#D6C27A] decoration-2 underline-offset-4 transition-colors hover:text-[#8B7135]">
+                                class="mt-3 inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink">
 
                                 View on Google Maps
 
@@ -63,7 +63,7 @@
                     <!-- Phone -->
                     <div class="flex items-start gap-4">
                         <div
-                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-accent">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -71,13 +71,13 @@
                             </svg>
                         </div>
 
-                        <div>
-                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                        <div class="min-w-0 flex-1">
+                            <h3 class="font-heading text-lg font-bold text-primary">
                                 Phone
                             </h3>
 
                             <a href="tel:12345678"
-                                class="mt-1 inline-block text-[#575A50] transition-colors hover:text-[#8B7135]">
+                                class="mt-1 inline-flex min-h-11 items-center text-ink-muted transition-colors hover:text-accent-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink">
                                 12345678
                             </a>
                         </div>
@@ -86,7 +86,7 @@
                     <!-- Opening hours -->
                     <div class="flex items-start gap-4">
                         <div
-                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#064E3B] text-[#D6C27A]">
+                            class="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary text-accent">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                                 <circle cx="12" cy="12" r="9" />
@@ -95,26 +95,26 @@
                         </div>
 
                         <div class="min-w-0 flex-1">
-                            <h3 class="font-heading text-lg font-bold text-[#064E3B]">
+                            <h3 class="font-heading text-lg font-bold text-primary">
                                 Opening Hours
                             </h3>
 
                             <div class="mt-3 space-y-3 text-sm sm:text-base">
 
-                                <div class="flex flex-col justify-between gap-1 sm:flex-row sm:gap-4">
-                                    <span class="text-[#575A50]">
+                                <div class="flex flex-wrap justify-between gap-x-4 gap-y-1">
+                                    <span class="text-ink-muted">
                                         Monday – Friday
                                     </span>
-                                    <span class="font-semibold text-[#252923] sm:text-right">
+                                    <span class="font-semibold text-ink">
                                         11:00 – 21:00
                                     </span>
                                 </div>
 
-                                <div class="flex flex-col justify-between gap-1 sm:flex-row sm:gap-4">
-                                    <span class="text-[#575A50]">
+                                <div class="flex flex-wrap justify-between gap-x-4 gap-y-1">
+                                    <span class="text-ink-muted">
                                         Saturday – Sunday
                                     </span>
-                                    <span class="font-semibold text-[#252923] sm:text-right">
+                                    <span class="font-semibold text-ink">
                                         12:00 – 22:00
                                     </span>
                                 </div>
@@ -126,7 +126,7 @@
                 </div>
 
                 <!-- Map panel -->
-                <div class="relative min-h-[280px] bg-[#E8E2D3] md:min-h-full">
+                <div class="relative min-h-70 bg-surface md:min-h-full">
 
                     <iframe title="Duck In Kowloon location map"
                         src="https://maps.google.com/maps?q=N%C3%B8rre%20Farimagsgade%2015%2C%201364%20K%C3%B8benhavn%20K&t=&z=16&ie=UTF8&iwloc=&output=embed"

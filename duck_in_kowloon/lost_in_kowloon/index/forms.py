@@ -40,7 +40,7 @@ class ContactForm(forms.Form):
         ),
     )
     message = forms.CharField(
-        max_length=200,
+        max_length=500,
         required=True,
         widget=forms.Textarea(
             attrs={

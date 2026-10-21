@@ -1,1 +1,11 @@
-{}
+{
+  "pages/contact.jsx": {
+    "file": "contact_app-B8r5aVWh.js",
+    "name": "contact_app",
+    "src": "pages/contact.jsx",
+    "isEntry": true,
+    "css": [
+      "contact_app-DYPEydLm.css"
+    ]
+  }
+}

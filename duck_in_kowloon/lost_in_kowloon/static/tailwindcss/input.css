@@ -4,4 +4,14 @@
     --font-sans: "DM Sans", sans-serif;
     --font-heading: "Playfair Display", serif;
     --color-brand: var(--color-emerald-900);
+    --color-primary: #064E3B;
+    --color-primary-hover: #083F32;
+    --color-accent: #D6C27F;
+    --color-accent-hover: #C6AF64;
+    --color-accent-ink: #8B7135;
+    --color-surface: #FAF7EF;
+    --color-surface-raised: #FFFFFF;
+    --color-ink: #252923;
+    --color-ink-muted: #575A50;
+    --color-outline: #D9D1BD;
 }

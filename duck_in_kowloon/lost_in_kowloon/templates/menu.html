@@ -1,30 +1,30 @@
 {% load static %}
 
-<section id="menu-section" class="bg-[#FAF7EF] px-4 py-12 sm:px-6 sm:py-8 lg:px-8">
+<section id="menu-section" class="scroll-mt-24 bg-surface px-4 py-12 font-sans text-ink sm:px-6 sm:py-16 lg:px-8 lg:py-20">
     <div class="mx-auto max-w-5xl">
 
         <!-- Section heading -->
         <div class="mb-8 text-center sm:mb-10">
-            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#8B7135]">
+            <p class="mb-2 text-xs font-semibold uppercase text-accent-ink">
                 Duck In Kowloon
             </p>
-            <h2 class="font-heading text-3xl font-bold text-[#064E3B] sm:text-4xl lg:text-5xl">
+            <h2 class="font-heading text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
                 Our Menu
             </h2>
-            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-[#D6C27A]"></div>
+            <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-accent"></div>
         </div>
 
         <div class="mx-auto flex max-w-4xl flex-col gap-5 sm:gap-6">
 
             <!-- Lunch menu -->
             <details
-                class="group overflow-hidden rounded-xl border border-[#D9D1BD] bg-white shadow-sm transition-shadow duration-300 open:shadow-lg">
+                class="group overflow-hidden rounded-lg border border-outline bg-surface-raised shadow-sm">
 
                 <summary
-                    class="flex cursor-pointer list-none items-center justify-between gap-4 bg-[#064E3B] px-4 py-5 text-white transition-colors duration-300 hover:bg-[#083F32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#D6C27A] sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 bg-primary px-4 py-5 text-white transition-colors duration-300 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
 
                     <div>
-                        <h3 class="font-heading text-xl font-semibold tracking-wide sm:text-2xl">
+                        <h3 class="font-heading text-xl font-semibold leading-tight sm:text-2xl">
                             Lunch Menu
                         </h3>
                         <p class="mt-1 text-sm text-emerald-100 sm:text-base">
@@ -32,7 +32,7 @@
                         </p>
                     </div>
 
-                    <svg class="h-6 w-6 shrink-0 text-[#D6C27A] transition-transform duration-300 group-open:rotate-180 sm:h-7 sm:w-7"
+                    <svg class="h-6 w-6 shrink-0 text-accent transition-transform duration-300 group-open:rotate-180 motion-reduce:transition-none sm:h-7 sm:w-7"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         stroke-width="1.8" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
@@ -45,19 +45,19 @@
 
                     <!-- PDF link -->
                     <a href="{% static 'menu/lunch_menu.pdf' %}" target="_blank" rel="noopener noreferrer"
-                        class="group/link flex items-center justify-between gap-3 rounded-lg border border-[#D9D1BD] bg-[#FAF7EF] px-4 py-4 transition-colors duration-200 hover:border-[#D6C27A] hover:bg-[#F3EBD7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B7135] sm:px-5">
+                        class="group/link flex items-center justify-between gap-3 border-b border-outline px-1 py-3 transition-colors duration-200 hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink">
 
                         <div>
                             <span
-                                class="block font-heading text-base font-bold text-[#064E3B] transition-colors group-hover/link:text-[#8B7135] sm:text-lg">
+                                class="block font-sans text-base font-semibold text-primary transition-colors group-hover/link:text-accent-ink sm:text-lg">
                                 View Lunch Menu
                             </span>
-                            <span class="mt-1 block text-sm text-[#575A50]">
+                            <span class="mt-1 block text-sm text-ink-muted">
                                 11:00 – 15:00 · PDF
                             </span>
                         </div>
 
-                        <svg class="h-6 w-6 shrink-0 text-[#8B7135] transition-transform group-hover/link:translate-x-1"
+                        <svg class="h-6 w-6 shrink-0 text-accent-ink transition-transform group-hover/link:translate-x-1 motion-reduce:transition-none"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="1.8" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
@@ -69,7 +69,7 @@
                     
                         <!-- Large feature image -->
                         <div
-                            class="relative col-span-2 row-span-2 aspect-square overflow-hidden rounded-lg sm:aspect-auto sm:min-h-[320px] md:min-h-[360px]">
+                            class="relative col-span-2 aspect-square overflow-hidden rounded-lg md:row-span-2 md:aspect-auto">
                             <img src="{% static 'images/lunch_images/kowloon_duck_lunch_1.jpg' %}" alt="Hong Kong roast duck" loading="lazy"
                                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105">
                         </div>
@@ -87,7 +87,7 @@
                         </div>
                     
                         <!-- Wide image -->
-                        <div class="relative col-span-2 aspect-[2/1] overflow-hidden rounded-lg">
+                        <div class="relative col-span-2 aspect-2/1 overflow-hidden rounded-lg">
                             <img src="{% static 'images/lunch_images/kowloon_duck_lunch_4.jpg' %}" alt="Wok cooking" loading="lazy"
                                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105">
                         </div>
@@ -98,13 +98,13 @@
 
             <!-- Dinner menu -->
             <details
-                class="group overflow-hidden rounded-xl border border-[#D9D1BD] bg-white shadow-sm transition-shadow duration-300 open:shadow-lg">
+                class="group overflow-hidden rounded-lg border border-outline bg-surface-raised shadow-sm">
 
                 <summary
-                    class="flex cursor-pointer list-none items-center justify-between gap-4 bg-[#064E3B] px-4 py-5 text-white transition-colors duration-300 hover:bg-[#083F32] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#D6C27A] sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 bg-primary px-4 py-5 text-white transition-colors duration-300 hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
 
                     <div>
-                        <h3 class="font-heading text-xl font-semibold tracking-wide sm:text-2xl">
+                        <h3 class="font-heading text-xl font-semibold leading-tight sm:text-2xl">
                             Dinner Menu
                         </h3>
                         <p class="mt-1 text-sm text-emerald-100 sm:text-base">
@@ -112,7 +112,7 @@
                         </p>
                     </div>
 
-                    <svg class="h-6 w-6 shrink-0 text-[#D6C27A] transition-transform duration-300 group-open:rotate-180 sm:h-7 sm:w-7"
+                    <svg class="h-6 w-6 shrink-0 text-accent transition-transform duration-300 group-open:rotate-180 motion-reduce:transition-none sm:h-7 sm:w-7"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                         stroke-width="1.8" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7" />
@@ -123,19 +123,19 @@
                 <div class="space-y-5 p-3 sm:space-y-6 sm:p-6 lg:p-7">
 
                     <a href="{% static 'menu/dinner_menu.pdf' %}" target="_blank" rel="noopener noreferrer"
-                        class="group/link flex items-center justify-between gap-3 rounded-lg border border-[#D9D1BD] bg-[#FAF7EF] px-4 py-4 transition-colors duration-200 hover:border-[#D6C27A] hover:bg-[#F3EBD7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B7135] sm:px-5">
+                        class="group/link flex items-center justify-between gap-3 border-b border-outline px-1 py-3 transition-colors duration-200 hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-ink">
 
                         <div>
                             <span
-                                class="block font-heading text-base font-bold text-[#064E3B] transition-colors group-hover/link:text-[#8B7135] sm:text-lg">
+                                class="block font-sans text-base font-semibold text-primary transition-colors group-hover/link:text-accent-ink sm:text-lg">
                                 View Dinner Menu
                             </span>
-                            <span class="mt-1 block text-sm text-[#575A50]">
+                            <span class="mt-1 block text-sm text-ink-muted">
                                 16:00 – 21:00 · PDF
                             </span>
                         </div>
 
-                        <svg class="h-6 w-6 shrink-0 text-[#8B7135] transition-transform group-hover/link:translate-x-1"
+                        <svg class="h-6 w-6 shrink-0 text-accent-ink transition-transform group-hover/link:translate-x-1 motion-reduce:transition-none"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                             stroke-width="1.8" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M7 7h10v10" />
@@ -145,7 +145,7 @@
                     <div class="grid grid-cols-2 gap-1.5 sm:gap-2 md:grid-cols-4">                    
                         <!-- Large feature image -->
                         <div
-                            class="relative col-span-2 row-span-2 aspect-square overflow-hidden rounded-lg sm:aspect-auto sm:min-h-[320px] md:min-h-[360px]">
+                            class="relative col-span-2 aspect-square overflow-hidden rounded-lg md:row-span-2 md:aspect-auto">
                             <img src="{% static 'images/lunch_images/kowloon_duck_lunch_1.jpg' %}" alt="Hong Kong roast duck" loading="lazy"
                                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105">
                         </div>
@@ -163,7 +163,7 @@
                         </div>
                     
                         <!-- Wide image -->
-                        <div class="relative col-span-2 aspect-[2/1] overflow-hidden rounded-lg">
+                        <div class="relative col-span-2 aspect-2/1 overflow-hidden rounded-lg">
                             <img src="{% static 'images/lunch_images/kowloon_duck_lunch_4.jpg' %}" alt="Wok cooking" loading="lazy"
                                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105">
                         </div>
